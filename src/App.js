@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from 'react';
+import Slider from './Slider.jsx';
 
 function App() {
+  const ref = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#37a4e8',
+        width: '100vw',
+        height: '100vh'
+      }}
+    >
+      <Slider ref={ref} />
+      {/* <button onClick={() => ref.current.prev()} style={{ zIndex: 9999 }}>
+        Prev
+      </button>
+      <button onClick={() => ref.current.next()} style={{ zIndex: 9999 }}>
+        Next
+      </button> */}
     </div>
   );
 }

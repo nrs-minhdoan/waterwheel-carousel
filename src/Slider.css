@@ -1,0 +1,51 @@
+#wheel-water-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 550px;
+    height: 300px
+
+}
+
+#wheel-water-slider .item-center {
+    z-index: 2;
+}
+
+.slider-item {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 550px;
+    height: 300px;
+    display: none;
+}
+
+#wheel-water-slider .slider-item:not(.item-center) {
+    opacity: 0.6;
+}
+
+#wheel-water-slider .item-left {
+    z-index: 1;
+    left: -150px;
+    display: block;
+    transform: scale(0.9);
+}
+
+#wheel-water-slider .item-right {
+    z-index: 1;
+    left: 150px;
+    display: block;
+    transform: scale(0.9);
+}
+
+.item-center {
+    display: block;
+    z-index: 3;
+}
+
+.item-opacity-zero {
+    opacity: 0!important;
+    pointer-events: none;
+}
